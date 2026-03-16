@@ -20,14 +20,14 @@
 #include "Socket.h"
 
 int main( int argc, char * argv[] ) {
-   const char * lab = "::1";
-   const char * request = "GET /ip HTTP/1.1\r\nHost: localhost\r\n\r\n";
+   const char * lab = "fe80::dff2:1a29:4c38:22d4%wlp0s20f3";
+   const char * request = "GET / HTTP/1.1\r\nHost: localhost\r\n\r\n";
 
    Socket s( 's', true );
    char a[512];
 
    memset( a, 0, 512 );
-   s.Connect( lab, 8080 );
+   s.Connect( lab, "8080" );
    s.Write( request );
    s.Read( a, 512 );
    printf( "%s\n", a);
