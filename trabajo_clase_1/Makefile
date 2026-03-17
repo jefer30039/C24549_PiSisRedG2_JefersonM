@@ -27,3 +27,6 @@ ipv6-test.out: ipv6-test.o Socket.o VSocket.o
 clean:
 	@rm -f *.o *.out
 
+protocolo:
+	g++ interaccion.cc -o protocolo -pthread
+
