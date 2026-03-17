@@ -7,7 +7,7 @@ CXX := g++
 CFLAGS := -g -c
 CXXFLAGS := -g -c
 DEPS := Socket.h
-TARGETS := ipv4-test.out ipv6-test.out
+TARGETS := ipv4-test.out ipv6-test.out ipv6-test.out
 
 ALL := $(TARGETS)
 
