@@ -1,0 +1,14 @@
+# Borrador del protocolo
+
+- Definir la interacción entre clientes y tenedores
+  - Explicar como el cliente solicita el contenido del sistema de archivos
+  - Explicar como el cliente solicita una figura en particular
+- Definir la interacción entre tenedores y servidores
+
+El sistema utilizará una cola de mensajes compartida como canal principal, donde cada proceso se identifica mediante un ID único. El cliente inicia el contacto colocando un mensaje de solicitud de conexión en la cola; para garantizar que el acceso sea seguro y no ocurran colas corruptas, se implementará un mutex que bloquee el recurso mientras el cliente escribe. El tenedor, que se encuentra en un ciclo de escucha constante, detectará el mensaje dirigido a su ID, procesará la validación y responderá a través de la misma cola confirmando que la sesión ha sido establecida.
+
+Cuando el cliente solicita el contenido del sistema de archivos, este no accede directamente a la memoria del tenedor, sino que envía un mensaje con un código de operación específico para lectura. El tenedor, al recibir esta petición, escanea sus estructuras de datos internas y genera un listado que incluye los nombres de los archivos y sus respectivos identificadores. Esta información se devuelve al cliente en un mensaje estructurado (posiblemente un JSON o un arreglo de estructuras), permitiendo que el cliente tenga una "vista" actualizada de qué recursos están disponibles para su manipulación sin sobrecargar el bus de datos.
+
+Para la solicitud de una figura en particular, el proceso es más detallado debido al tamaño potencial de los datos. El cliente envía un mensaje que incluye el ID específico de la figura deseada. El tenedor, tras localizar el recurso, fragmenta la figura en varios paquetes de mensajes si esta supera el límite de capacidad de la cola. Cada fragmento se envía de forma secuencial y, al finalizar, el tenedor envía un mensaje de cierre de transferencia. El cliente reconstruye la figura en su memoria local y envía un mensaje de confirmación de recepción exitosa o solicita un reenvío en caso de detectar errores en los datos recibidos.
+
+Finalmente, la interacción entre tenedores y servidores se define como un flujo de coordinación y administración del sistema. El servidor actúa como el supervisor de la cola, por lo que los tenedores deben enviarle mensajes periódicos de estado para informar que siguen activos y cuánta carga de trabajo poseen. Si el servidor detecta que un tenedor está saturado o que un nuevo proceso ha entrado al sistema, envía mensajes de control para redistribuir las figuras o actualizar las tablas de rutas. Esta comunicación asegura que el servidor siempre sepa qué proceso tiene cada recurso, funcionando como un directorio centralizado que guía las peticiones de los clientes hacia el tenedor correcto.
