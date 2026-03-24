@@ -53,6 +53,15 @@ SSLSocket::SSLSocket( bool IPv6 ) {
   *
  **/
 SSLSocket::SSLSocket( char * certFileName, char * keyFileName, bool IPv6 ) {
+
+   this->Init( 's', IPv6 );
+
+   this->Context = nullptr;
+   this->BIO = nullptr;
+
+   this->InitSSL( true );					// Initializes to server context
+   this->LoadCertificates( certFileName, keyFileName );
+
 }
 
 
