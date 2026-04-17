@@ -37,13 +37,15 @@
   *
  **/
 void VSocket::Init( char t, bool IPv6 ){
+   int domain = IPv6 ? AF_INET6 : AF_INET;
+   int type = (t == 's') ? SOCK_STREAM : SOCK_DGRAM;
 
-   int st = -1;
-
-   if ( -1 == st ) {
-      throw std::runtime_error( "VSocket::Init, (reason)" );
+   this->sockId = socket( domain, type, 0 );
+   if ( -1 == this->sockId ) {
+      throw std::runtime_error( "VSocket::Init, could not create socket" );
    }
-
+   this->type = t;
+   this->IPv6 = IPv6;
 }
 
 
@@ -55,13 +57,8 @@ void VSocket::Init( char t, bool IPv6 ){
   *
  **/
 void VSocket::Init( int id  ){
-
-   int st = -1;
-
-   if ( -1 == st ) {
-      throw std::runtime_error( "VSocket::Init, (reason)" );
-   }
-
+   this->sockId = id;
+   this->IPv6 = false; // Default, maybe we should detect it but usually used for accepted connections
 }
 
 
@@ -82,12 +79,13 @@ VSocket::~VSocket() {
   *
  **/
 void VSocket::Close(){
-   int st = -1;
-
-   if ( -1 == st ) {
-      throw std::runtime_error( "VSocket::Close()" );
+   if ( this->sockId != -1 ) {
+      int st = close( this->sockId );
+      if ( -1 == st ) {
+         throw std::runtime_error( "VSocket::Close()" );
+      }
+      this->sockId = -1;
    }
-
 }
 
 
@@ -100,15 +98,20 @@ void VSocket::Close(){
   *
  **/
 int VSocket::TryToConnect( const char * hostip, int port ) {
-
    int st = -1;
+   struct sockaddr_in server_addr;
 
+   memset( &server_addr, 0, sizeof( server_addr ) );
+   server_addr.sin_family = AF_INET;
+   server_addr.sin_addr.s_addr = inet_addr( hostip );
+   server_addr.sin_port = htons( port );
+
+   st = connect( this->sockId, (const struct sockaddr *) &server_addr, sizeof( server_addr ) );
    if ( -1 == st ) {
-      throw std::runtime_error( "VSocket::TryToConnect" );
+      // throw std::runtime_error( "VSocket::TryToConnect" );
    }
 
    return st;
-
 }
 
 
@@ -121,12 +124,30 @@ int VSocket::TryToConnect( const char * hostip, int port ) {
   *
  **/
 int VSocket::TryToConnect( const char *host, const char *service ) {
+   struct addrinfo hints, *result, *rp;
    int st = -1;
 
-   throw std::runtime_error( "VSocket::TryToConnect" );
+   memset( &hints, 0, sizeof( hints ) );
+   hints.ai_family = this->IPv6 ? AF_INET6 : AF_INET;
+   hints.ai_socktype = (this->type == 's') ? SOCK_STREAM : SOCK_DGRAM;
+   hints.ai_flags = 0;
+   hints.ai_protocol = 0;
+
+   st = getaddrinfo( host, service, &hints, &result );
+   if ( 0 != st ) {
+      throw std::runtime_error( "VSocket::TryToConnect (getaddrinfo)" );
+   }
+
+   for ( rp = result; rp != nullptr; rp = rp->ai_next ) {
+      st = connect( this->sockId, rp->ai_addr, rp->ai_addrlen );
+      if ( st != -1 ) {
+         break;
+      }
+   }
+
+   freeaddrinfo( result );
 
    return st;
-
 }
 
 
@@ -141,11 +162,19 @@ int VSocket::TryToConnect( const char *host, const char *service ) {
  **/
 int VSocket::Bind( int port ) {
    int st = -1;
+   struct sockaddr_in server_addr;
 
-   throw std::runtime_error( "VSocket::Bind2026" );
+   memset( &server_addr, 0, sizeof( server_addr ) );
+   server_addr.sin_family = AF_INET;
+   server_addr.sin_addr.s_addr = htonl( INADDR_ANY );
+   server_addr.sin_port = htons( port );
+
+   st = bind( this->sockId, (const struct sockaddr *) &server_addr, sizeof( server_addr ) );
+   if ( -1 == st ) {
+      throw std::runtime_error( "VSocket::Bind" );
+   }
 
    return st;
-
 }
 
 
@@ -161,10 +190,12 @@ int VSocket::Bind( int port ) {
 int VSocket::MarkPassive( int backlog ) {
    int st = -1;
 
-   throw std::runtime_error( "VSocket::MarkPassive" );
+   st = listen( this->sockId, backlog );
+   if ( -1 == st ) {
+      throw std::runtime_error( "VSocket::MarkPassive" );
+   }
 
    return st;
-
 }
 
 
@@ -179,10 +210,12 @@ int VSocket::MarkPassive( int backlog ) {
 int VSocket::WaitForConnection( void ) {
    int st = -1;
 
-   throw std::runtime_error( "VSocket::WaitForConnection" );
+   st = accept( this->sockId, nullptr, nullptr );
+   if ( -1 == st ) {
+      throw std::runtime_error( "VSocket::WaitForConnection" );
+   }
 
    return st;
-
 }
 
 
@@ -197,10 +230,12 @@ int VSocket::WaitForConnection( void ) {
 int VSocket::Shutdown( int mode ) {
    int st = -1;
 
-   throw std::runtime_error( "VSocket::Shutdown" );
+   st = shutdown( this->sockId, mode );
+   if ( -1 == st ) {
+      throw std::runtime_error( "VSocket::Shutdown" );
+   }
 
    return st;
-
 }
 
 
