@@ -1,0 +1,146 @@
+execve("./SSLServer", ["./SSLServer", "4321"], 0x7fff4cf76a00 /* 71 vars */) = 0
+brk(NULL)                               = 0x58318554e000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c693a121000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 10
+fstat(10, {st_mode=S_IFREG|0644, st_size=84607, ...}) = 0
+mmap(NULL, 84607, PROT_READ, MAP_PRIVATE, 10, 0) = 0x7c693a10c000
+close(10)                               = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 10
+read(10, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(10, {st_mode=S_IFREG|0644, st_size=696512, ...}) = 0
+mmap(NULL, 694384, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 10, 0) = 0x7c693a062000
+mmap(0x7c693a080000, 401408, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x1e000) = 0x7c693a080000
+mmap(0x7c693a0e2000, 114688, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x80000) = 0x7c693a0e2000
+mmap(0x7c693a0fe000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x9c000) = 0x7c693a0fe000
+close(10)                               = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 10
+read(10, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(10, {st_mode=S_IFREG|0644, st_size=5309400, ...}) = 0
+mmap(NULL, 5323728, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 10, 0) = 0x7c6939a00000
+mmap(0x7c6939ab3000, 3358720, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0xb3000) = 0x7c6939ab3000
+mmap(0x7c6939de7000, 831488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x3e7000) = 0x7c6939de7000
+mmap(0x7c6939eb2000, 389120, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x4b1000) = 0x7c6939eb2000
+mmap(0x7c6939f11000, 11216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c6939f11000
+close(10)                               = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 10
+read(10, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(10, {st_mode=S_IFREG|0644, st_size=2592224, ...}) = 0
+mmap(NULL, 2609472, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 10, 0) = 0x7c6939600000
+mmap(0x7c693969d000, 1343488, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x9d000) = 0x7c693969d000
+mmap(0x7c69397e5000, 552960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x1e5000) = 0x7c69397e5000
+mmap(0x7c693986c000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x26b000) = 0x7c693986c000
+mmap(0x7c693987a000, 12608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c693987a000
+close(10)                               = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 10
+read(10, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(10, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0
+mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 10, 0) = 0x7c693a034000
+mmap(0x7c693a038000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x4000) = 0x7c693a038000
+mmap(0x7c693a05c000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x28000) = 0x7c693a05c000
+mmap(0x7c693a060000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x2b000) = 0x7c693a060000
+close(10)                               = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 10
+read(10, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
+pread64(10, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(10, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0
+pread64(10, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 10, 0) = 0x7c6939200000
+mmap(0x7c6939228000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x28000) = 0x7c6939228000
+mmap(0x7c69393b0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x1b0000) = 0x7c69393b0000
+mmap(0x7c69393ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x1fe000) = 0x7c69393ff000
+mmap(0x7c6939405000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7c6939405000
+close(10)                               = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 10
+read(10, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+fstat(10, {st_mode=S_IFREG|0644, st_size=952616, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c693a032000
+mmap(NULL, 950296, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 10, 0) = 0x7c6939f49000
+mmap(0x7c6939f59000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x10000) = 0x7c6939f59000
+mmap(0x7c6939fd8000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0x8f000) = 0x7c6939fd8000
+mmap(0x7c693a030000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 10, 0xe7000) = 0x7c693a030000
+close(10)                               = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7c6939f46000
+arch_prctl(ARCH_SET_FS, 0x7c6939f46740) = 0
+set_tid_address(0x7c6939f46a10)         = 13696
+set_robust_list(0x7c6939f46a20, 24)     = 0
+rseq(0x7c6939f47060, 0x20, 0, 0x53053053) = 0
+mprotect(0x7c69393ff000, 16384, PROT_READ) = 0
+mprotect(0x7c693a030000, 4096, PROT_READ) = 0
+mprotect(0x7c693a060000, 4096, PROT_READ) = 0
+mprotect(0x7c693986c000, 45056, PROT_READ) = 0
+mprotect(0x7c6939eb2000, 376832, PROT_READ) = 0
+mprotect(0x7c693a0fe000, 40960, PROT_READ) = 0
+mprotect(0x583177b64000, 4096, PROT_READ) = 0
+mprotect(0x7c693a161000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7c693a10c000, 84607)           = 0
+futex(0x7c693987a7bc, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getrandom("\x87\x4e\x1f\xa1\x72\xc3\x3b\x82", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x58318554e000
+brk(0x58318556f000)                     = 0x58318556f000
+socket(AF_INET, SOCK_STREAM, IPPROTO_IP) = 10
+futex(0x7c6939f113ec, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f113e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f113d8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f114e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f113c8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f113c0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/proc/sys/crypto/fips_enabled", O_RDONLY) = -1 ENOENT (No such file or directory)
+futex(0x7c6939f110ec, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f10f08, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f10e44, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f11424, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f10e38, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+brk(0x583185591000)                     = 0x583185591000
+futex(0x7c6939f113d0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+openat(AT_FDCWD, "/usr/lib/ssl/openssl.cnf", O_RDONLY) = 11
+fstat(11, {st_mode=S_IFREG|0644, st_size=12324, ...}) = 0
+read(11, "#\n# OpenSSL example configuratio"..., 4096) = 4096
+read(11, "d attributes must be the same, a"..., 4096) = 4096
+read(11, "coding of an extension: beware e"..., 4096) = 4096
+read(11, " = $insta::certout # insta.cert."..., 4096) = 36
+read(11, "", 4096)                      = 0
+close(11)                               = 0
+futex(0x7c6939f10bf8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f10c54, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f11394, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f10bd8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c6939f113b8, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c693a10b844, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c693a10b864, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c693a10b858, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+futex(0x7c693a10b838, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+brk(0x5831855b2000)                     = 0x5831855b2000
+brk(0x5831855b1000)                     = 0x5831855b1000
+brk(0x5831855d2000)                     = 0x5831855d2000
+futex(0x7c6939f11520, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getpid()                                = 13696
+getrandom("\x10\x30\x7c\xed\x85\x50\xb8\xde\x15\xdc\xb2\x16\x31\x0c\xe0\x7f\x2f\x4e\x53\x9f\x3d\x52\x21\x5a\x90\xea\x1f\x63\x1f\xed\x0e\xd1"..., 48, 0) = 48
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+getpid()                                = 13696
+openat(AT_FDCWD, "ci0123.pem", O_RDONLY) = 11
+fstat(11, {st_mode=S_IFREG|0664, st_size=1334, ...}) = 0
+read(11, "-----BEGIN CERTIFICATE-----\nMIID"..., 4096) = 1334
+close(11)                               = 0
+openat(AT_FDCWD, "key0123.pem", O_RDONLY) = 11
+lseek(11, 0, SEEK_CUR)                  = 0
+lseek(11, 0, SEEK_CUR)                  = 0
+lseek(11, 0, SEEK_CUR)                  = 0
+lseek(11, 0, SEEK_CUR)                  = 0
+fstat(11, {st_mode=S_IFREG|0600, st_size=1704, ...}) = 0
+lseek(11, 0, SEEK_SET)                  = 0
+read(11, "-----BEGIN PRIVATE KEY-----\nMIIE"..., 4096) = 1704
+close(11)                               = 0
+bind(10, {sa_family=AF_INET, sin_port=htons(4321), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
+listen(10, 10)                          = 0
+accept(10, NULL, NULLstrace: Process 13696 detached
+ <detached ...>
