@@ -1,0 +1,12 @@
+[SERVER] [29/05/2026 09:50] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [29/05/2026 09:51] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon complete
+[SERVER] [29/05/2026 09:51] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [29/05/2026 09:51] [PROTO_RESPONSE] FIGURE_NOT_FOUND figure=car part=
+[SERVER] [29/05/2026 09:57] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [29/05/2026 09:57] [PROTO_RESPONSE] FIGURE_FOUND figure=death_star_ii complete
+[SERVER] [29/05/2026 10:13] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [29/05/2026 10:13] [PROTO_RESPONSE] FIGURE_FOUND figure=fish part=2
+[SERVER] [29/05/2026 10:14] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [29/05/2026 10:14] [PROTO_RESPONSE] FIGURE_FOUND figure=fish part=1
+[SERVER] [29/05/2026 10:54] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [29/05/2026 10:55] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon complete
