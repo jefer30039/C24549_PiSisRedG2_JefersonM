@@ -1,0 +1,19 @@
+[SERVER] [15/06/2026 16:27] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:32] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:32] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon part=1
+[SERVER] [15/06/2026 16:36] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:36] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon part=1
+[SERVER] [15/06/2026 16:42] [PROTO_RESPONSE] FIGURE_FOUND figure=fish part=2
+[SERVER] [15/06/2026 16:42] [PROTO_RESPONSE] FIGURE_FOUND figure=millennium_falcon part=1
+[SERVER] [15/06/2026 16:42] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:42] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon part=2
+[SERVER] [15/06/2026 16:43] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:43] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon part=1
+[SERVER] [15/06/2026 16:46] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:46] [PROTO_RESPONSE] FIGURE_FOUND figure=dragon part=1
+[SERVER] [15/06/2026 16:47] [PROTO_RESPONSE] FIGURE_FOUND figure=death_star_ii part=1
+[SERVER] [15/06/2026 16:51] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 16:51] [PROTO_RESPONSE] FIGURE_FOUND figure=fish part=2
+[SERVER] [15/06/2026 17:02] [RESPONSE] FIGURES_LIST
+[SERVER] [15/06/2026 17:03] [PROTO_RESPONSE] DIRECTORY figures=dragon,horse,fish,giraffe,death_star_ii,millennium_falcon,imperial_destroyer
+[SERVER] [15/06/2026 17:59] [PROTO_RESPONSE] FIGURE_FOUND figure=fish part=1
