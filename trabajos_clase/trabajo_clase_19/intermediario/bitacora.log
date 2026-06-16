@@ -1,0 +1,62 @@
+[INTERMEDIARY] [15/06/2026 16:27] [START] bindIp=0.0.0.0 clientPort=8081 figureServer=127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE_TABLE] Construyendo tabla de rutas...
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE_TABLE] Figuras registradas: 7
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=death_star_ii ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=dragon ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=fish ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=giraffe ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=horse ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=imperial_destroyer ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [ROUTE] figura=millennium_falcon ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 16:27] [LISTEN] UDP JOIN en puerto 3030
+[INTERMEDIARY] [15/06/2026 16:27] [LISTEN] Clientes en 0.0.0.0:8081
+[INTERMEDIARY] [15/06/2026 16:27] [LISTEN] TCP PEER en puerto 3031
+[INTERMEDIARY] [15/06/2026 16:41] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:41] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 16:41] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:41] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 16:41] [CLIENT_REQUEST] HEAD /favicon.ico HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 16:42] [CLIENT_REQUEST] GET /favicon.ico HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [CLIENT_REQUEST] GET /lego/list.php?figure=fish&part=2 HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [HANDLE_LIST] figure=fish part=2
+[INTERMEDIARY] [15/06/2026 16:42] [PROTO_REQUEST] Enviando: P/G/fish:2 -> 127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:42] [FIGURE_FOUND] figure=fish part=2 server=127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:42] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 16:42] [CLIENT_REQUEST] GET /lego/list.php?figure=millennium_falcon&part=1 HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [HANDLE_LIST] figure=millennium_falcon part=1
+[INTERMEDIARY] [15/06/2026 16:42] [PROTO_REQUEST] Enviando: P/G/millennium_falcon:1 -> 127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:42] [FIGURE_FOUND] figure=millennium_falcon part=1 server=127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:42] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:42] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 16:47] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:47] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 16:47] [CLIENT_REQUEST] GET /lego/list.php?figure=death_star_ii&part=1 HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:47] [HANDLE_LIST] figure=death_star_ii part=1
+[INTERMEDIARY] [15/06/2026 16:47] [PROTO_REQUEST] Enviando: P/G/death_star_ii:1 -> 127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:47] [FIGURE_FOUND] figure=death_star_ii part=1 server=127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 16:47] [CLIENT_REQUEST] GET /lego/index.php HTTP/1.1
+[INTERMEDIARY] [15/06/2026 16:47] [HANDLE_INDEX] Figuras disponibles: 7
+[INTERMEDIARY] [15/06/2026 17:03] [START] bindIp=0.0.0.0 clientPort=8081 figureServer=127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE_TABLE] Construyendo tabla de rutas...
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE_TABLE] Figuras registradas: 7
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=death_star_ii ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=dragon ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=fish ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=giraffe ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=horse ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=imperial_destroyer ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [ROUTE] figura=millennium_falcon ip=127.0.0.1 puerto=8080
+[INTERMEDIARY] [15/06/2026 17:03] [LISTEN] UDP JOIN en puerto 3030
+[INTERMEDIARY] [15/06/2026 17:03] [LISTEN] Clientes en 0.0.0.0:8081
+[INTERMEDIARY] [15/06/2026 17:03] [LISTEN] TCP PEER en puerto 3031
+[INTERMEDIARY] [15/06/2026 18:10] [START] bindIp=0.0.0.0 clientPort=8081 figureServer=127.0.0.1:8080
+[INTERMEDIARY] [15/06/2026 18:10] [ROUTE_TABLE] Construyendo tabla de rutas...
+[INTERMEDIARY] [15/06/2026 18:10] [ERROR] sendProtoMessage error: VSocket::TryToConnect connect IPv4: Connection refused
+[INTERMEDIARY] [15/06/2026 18:10] [ERROR] Respuesta inesperada de P/R/dir: 
+[INTERMEDIARY] [15/06/2026 18:10] [ROUTE_TABLE] Figuras registradas: 0
+[INTERMEDIARY] [15/06/2026 18:10] [LISTEN] Clientes en 0.0.0.0:8081
+[INTERMEDIARY] [15/06/2026 18:10] [LISTEN] UDP JOIN en puerto 3030
+[INTERMEDIARY] [15/06/2026 18:10] [LISTEN] TCP PEER en puerto 3031
