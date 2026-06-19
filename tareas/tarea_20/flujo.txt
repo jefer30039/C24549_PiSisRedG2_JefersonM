@@ -1,0 +1,29 @@
+Flujo de Información: Solicitud de Figuras de Lego
+Paso 1: La petición del Cliente (Red Externa)
+Origen: El Cliente (Cli) inicia el proceso.
+
+Trayecto: La solicitud viaja a través de una Red externa (representada por la nube rosa).
+
+Punto de control: Pasa por el componente 3-5 (que suele representar un balanceador de carga, un proxy o un rango de puertos/capas de red específicas) antes de conectarse con el Intermediario.
+
+Paso 2: El Intermediario procesa la solicitud
+Recepción: El Intermediario (Int.) recibe la solicitud del cliente.
+
+Propósito: La función de este componente es validar, traducir o enrutar la petición de "figuras de Lego" que viene desde el exterior hacia los sistemas internos seguros.
+
+Paso 3: El cruce de fronteras (De L2 a L3)
+Para que la información del Intermediario llegue al servidor de Figuras, debe cruzar de una red a otra:
+
+La información pasa primero por el nodo L2 (Capa 2 / Enlace de datos o un switch virtual/físico).
+
+Como vemos en el papel pegado en el centro, se utiliza un puente o enrutador L3 (Capa 3 / Red) para conectar la pizarra de la izquierda (un segmento de red) con la de la derecha (otro segmento de red de manera segura).
+
+Paso 4: Procesamiento en la Red Interna (Servidor de Figuras)
+Trayecto: Una vez cruzado el nodo L2, la petición se mueve estrictamente dentro de la Red interna (nube roja).
+
+Destino (Servidor de Figuras): Llega al componente Fig. (Servidor de Figuras / Fpg en la otra pizarra). Este es el backend encargado de gestionar la lógica de las piezas de Lego.
+
+Protocolo: El diagrama de la derecha detalla que esta comunicación interna utiliza TCP (Protocolo), garantizando que los datos no se pierdan, e identifica puertos o flujos específicos (mencionando de reojo UDP para otros flujos rápidos).
+
+Paso 5: Consulta al Almacenamiento (Base de Datos)
+Final del flujo: El servidor de figuras (Fig.) finalmente consulta al componente Alm. (Almacenamiento / Base de datos), donde están guardados físicamente los registros, inventarios o imágenes de las figuras de Lego solicitadas.
