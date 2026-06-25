@@ -79,36 +79,43 @@ exit
 
 int vlan 200
 ip address 172.16.123.1 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
 int vlan 210
 ip address 172.16.123.17 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
 int vlan 220
 ip address 172.16.123.33 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
 int vlan 230
 ip address 172.16.123.49 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
 int vlan 240
 ip address 172.16.123.65 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
 int vlan 250
 ip address 172.16.123.81 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
 int vlan 260
 ip address 172.16.123.97 255.255.255.240
+ip directed-broadcast
 no shutdown
 exit
 
